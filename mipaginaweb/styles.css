@@ -1,0 +1,21 @@
+:root{
+    --color-barra-lateral: rgb(116,1,182);
+
+    --color-texto: rgb(0,0,0);
+    --color-texto-menu: rgb(40,40,40);
+
+    --color-boton: rgb(11,238,0);
+    --color-boton-texto: rgb(0,0,0);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    border: 5px red;
+    height: 100vh;
+    width: 100%;
+    background-color: white;
+}
