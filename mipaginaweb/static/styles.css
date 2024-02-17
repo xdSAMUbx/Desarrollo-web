@@ -90,13 +90,13 @@ body{
     margin-bottom: 20px;
 }
 .contenido .barra-lateral .nombre{
-    margin: 20px;
+    margin-top: 80px;
     font-size: 30px;
     text-align: center;
     color: var(--color-letra);
 }
 .contenido .barra-lateral .ocupacion-actual{
-    margin: 20px;
+    margin-top: 50px;
     text-align: center;
     color: var(--color-letra);
 }
