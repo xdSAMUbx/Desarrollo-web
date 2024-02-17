@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&display=swap');
 :root{
-    --color-fondos: rgb(29,26,47);
+    --color-barras: rgb(29,26,47);
     --color-letra: rgb(255,255,255);
 
     --color-boton: rgb(139,212,80);
     --color-boton-letra: rgb(115,79,154);
+
+    --color-contenido-principal: rgb(115,79,154);
 }
 *{
     margin: 0;
@@ -17,22 +19,22 @@ body{
 }
 /*-----------------------------------------barra superior*/
 .barra-superior{
+    overflow: hidden;
     height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--color-fondos);
+    background-color: var(--color-barras);
 }
 .barra-superior .icono-superior{
     display: flex;
-    margin-left: 20px;
+    margin-left: 10px;
     height: 50px;
     width: 300px;
     align-items: center;
     justify-content: center;
     text-align: center;
     text-justify: center;
-    transition: 0.5s top ease;
     color: var(--color-letra);
 }
 .barra-superior .icono-superior ion-icon{
@@ -64,6 +66,51 @@ body{
     cursor: pointer;
     background-color: var(--color-boton);
     color: var(--color-boton-letra);
-    border-color: var(--color-fondos);
+    border-color: var(--color-barras);
 }
 /*----------------------------------------------------main*/
+.contenido{
+    display: flex;
+    border: 2px solid red;
+}
+.contenido .barra-lateral{
+    overflow: hidden;
+    width: 400px;
+    height: 100vh;
+    background-color: var(--color-barras);
+    border: 2px solid white;
+}
+.contenido .barra-lateral img{
+    border-radius: 50%;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 2px solid green;
+}
+.contenido .barra-lateral .nombre{
+    margin: 20px;
+    font-size: 30px;
+    text-align: center;
+    color: var(--color-letra);
+    border: 2px solid brown;
+}
+.contenido .barra-lateral .ocupacion-actual{
+    margin: 20px;
+    text-align: center;
+    color: var(--color-letra);
+    border: 2px solid yellow;
+}
+.contenido .barra-lateral .redes-contacto{
+    margin: 20px;
+    text-align: center;
+    color: var(--color-letra);
+    border: 2px solid yellow;
+}
+.contenido .descripcion{
+    width: 100%;
+    background-color: var(--color-contenido-principal);
+    border: 2px solid blue;
+}
