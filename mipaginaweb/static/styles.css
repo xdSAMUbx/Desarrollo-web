@@ -7,6 +7,8 @@
     --color-boton-letra: rgb(115,79,154);
 
     --color-contenido-principal: rgb(115,79,154);
+
+    --color-linea: rgb(168, 167, 167);
 }
 *{
     margin: 0;
@@ -68,17 +70,15 @@ body{
     color: var(--color-boton-letra);
     border-color: var(--color-barras);
 }
-/*----------------------------------------------------main*/
+/*-----------------------------------------barra lateral*/
 .contenido{
     display: flex;
-    border: 2px solid red;
 }
 .contenido .barra-lateral{
     overflow: hidden;
     width: 400px;
     height: 100vh;
     background-color: var(--color-barras);
-    border: 2px solid white;
 }
 .contenido .barra-lateral img{
     border-radius: 50%;
@@ -88,29 +88,46 @@ body{
     margin: auto;
     margin-top: 20px;
     margin-bottom: 20px;
-    border: 2px solid green;
 }
 .contenido .barra-lateral .nombre{
     margin: 20px;
     font-size: 30px;
     text-align: center;
     color: var(--color-letra);
-    border: 2px solid brown;
 }
 .contenido .barra-lateral .ocupacion-actual{
     margin: 20px;
     text-align: center;
     color: var(--color-letra);
-    border: 2px solid yellow;
 }
-.contenido .barra-lateral .redes-contacto{
+.contenido .barra-lateral .linea{
     margin: 20px;
-    text-align: center;
-    color: var(--color-letra);
-    border: 2px solid yellow;
+    height: 1px;
+    background-color: var(--color-linea);
 }
+
+.contenido .barra-lateral .redes-contacto{
+    height: 50px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    color: var(--color-letra);
+}
+.contenido .barra-lateral ion-icon{
+    height: 100%;
+    width: 50px;
+    margin-right: 20px;
+    margin-left: 20px;
+    color: var(--color-letra);
+    cursor: pointer;
+}
+.contenido .barra-lateral .idiomas ion-icon{
+    margin: auto;
+    display: flex;
+    height: 25px;
+}
+/*------------------------------------contenidoprincipal*/
 .contenido .descripcion{
     width: 100%;
     background-color: var(--color-contenido-principal);
-    border: 2px solid blue;
 }
