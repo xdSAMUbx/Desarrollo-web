@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Forbici Peluqueria</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <link href="../static/estilos.css" rel="stylesheet" >
+</head>
+<body>
+	<main>
+            <header id="barra_sup">
+                <div class="d-flex container mt-5 mb-3 mx-auto">
+                    <ul class="nav">
+                        <a href="/" class="text-white text-decoration-none"><span class="fs-1" id="texto_pelu">FORBICI PELUQUERIA</span></a>
+                    </ul>
+                </div>
+            </header>
+            <header id="cabecera_productos">
+                <div id="texto">
+                    <div class="d-flex container text-center mx-auto">
+                        <ul class="nav align-items-center mt-1">
+                            <li class="nav-item">
+                                <a class="nav-link text-white" aria-current="page" href="/" id="texto_generico">Inicio</a>
+                            <li class="nav item dropdown">
+                                <a class="nav-link text-white dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false" id="texto_generico">Damas</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="/damas" id="texto_generico">Servicios</a></li>
+                                    </ul>
+                            </li>            
+                            <li class="nav item dropdown">
+                                <a class="nav-link text-white dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false" id="texto_generico">Caballeros</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="/caballeros" id="texto_generico">Servicios</a></li>
+                                    </ul>
+                            </li> 
+                            <li class="nav item dropdown">
+                                <a class="nav-link text-white dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false" id="texto_generico">Productos</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="/marcel_france" id="texto_generico">Marcel France</a></li>
+                                    </ul>
+                            </li> 
+                        </ul>
+                        <ul class="nav align-items-center ms-auto">
+                            <li><a class="nav-item me-3" href="https://www.facebook.com/profile.php?id=100063527173740">
+                                <i class="fa-brands fa-facebook-f" style="color: #ffffff"></i></a>
+                            </li>
+                            <li><a class="nav-item me-3"href="https://wa.me/573144049036">
+                                <i class="fa-brands fa-whatsapp fa-lg" style="color: #ffffff;"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            <div class="container mt-3 pb-5 " id="texto_principal">
+                <div class="d-flex align-items-center bg-black">
+                    <img class="float-start" src="../static/chica_inicio.jpg" alt="Imagen de master1305 en Freepik" width="40%">
+                        <div class="flex-grow-1">
+                            <p class="display-1 text-white text-center" id="texto_1">
+                                ¡Bienvenidos!
+                            </p>
+                            <p class="fs-2 fst-italic text-white text-center" id="texto_2">
+                                Forbici Peluqueria donde Expresas Tu Belleza
+                            </p>
+                        </div>
+                </div>
+            </div>
+        <div class="p-5" id="forbici">
+            <div class="container text-center">
+                <p class="text-black display-5 " id="texto_pelu">
+                    FORBICI PELUQUERIA
+                    <p class="fs-2">
+                        ¿Quienes Somos?
+                    </p>
+                    <P class="fs-5 " id="texto_generico">
+                        Es el lugar ideal para el asesorar su imagen,
+                        es atendido por su propietaria, Blanca Pachon. Esta sala fue inaugurada
+                        en el año 2011 en el corazón del patrimonio historico de Bogotá, en la 
+                        localidad Candelaria, Colombia.
+                    </P>
+                </p>
+            </div>
+        </div>
+        <div class="container mt-5 mb-5 " id="texto_principal">
+            <div class="d-flex align-items-center bg-black">
+                <div class="flex-grow-1">
+                    <p class="display-1 text-white text-center" id="texto_1">
+                        Visitanos:
+                    </p>
+                    <p class="fs-2 fst-italic text-white text-center" id="texto_2">
+                        Calle 12 #3-90, Bogotá, Colombia
+                    </p>
+                    <p class="display-1 text-white text-center" id="texto_1">
+                        Contacto:
+                    </p>
+                    <p class="fs-2 fst-italic text-white text-center" id="texto_2">
+                        +57 314 - 404 - 9036
+                    </p>
+                </div>
+                <img class="" src="../static/puerta_local.jpg" width="40%">
+            </div>
+        </div>
+        <div class="container mb-5" id="map"></div>
+</main>
+            <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+            <script> 
+                var map = L.map('map').setView([4.597431461310311, -74.07199562484287], 18); 
+                L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    maxZoom: 19,
+                    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+                }).addTo(map);
+                var marker = L.marker([4.597431461310311, -74.07199562484287]).addTo(map);
+            </script>
+            <script src="https://kit.fontawesome.com/ffe783e6ab.js" crossorigin="anonymous"></script>
+            <footer id="barra_sup">
+                <div class="p-5 container text-center">
+                    <div class="row align-items-center">
+                      <div class="col text-white">
+                        <div class="border-bottom">
+                            <p class="m-3">Comunícate con nosotros</p>
+                        </div>
+                        <ul class="nav mt-3 ">
+                            <li><a><p class="m-3">Bogotá</p></a></li>
+                        </ul>
+                        <ul class="nav mt-3 m-3">
+                            <li><a><i class="fa-solid fa-phone" style="color: #ffffff;"></i></a></li>
+                            <li><a><p class="ms-3">+57 314-404-9036</p></a></li>
+                        </ul>
+                        <ul class="nav mt-3 m-3">
+                            <li><a><i class="fa-solid fa-phone" style="color: #ffffff;"></i></i></a></li>
+                            <li><a><p class="ms-3">(1) 243 7361</p></a></li>
+                        </ul>
+                        <ul class="nav mt-3 m-3">
+                            <li><a><i class="fa-solid fa-location-pin" style="color: #ffffff;"></i></a></li>
+                            <li><a><p class="ms-3">Calle 12 #3-90</p></a></li>
+                        </ul>
+                      </div>
+                      <div class="col text-white">
+                        <div class="fs-2 p-4 ">
+                            <p id="texto_pelu">Forbici Peluqueria</p>
+                        </div>
+                        <div class="fs-4 fst-italic">
+                            <p>Expresa Tu Belleza</p>
+                        </div>
+                        <div class="fs-5 fst-italic">
+                            <p>©2023 por Forbici Peluqueria.</p>
+                        </div>
+                      </div>
+                      <div class="col text-white">
+                        <div class="border-bottom">
+                            <p class="m-3">Horarios de atención</p>
+                        </div>
+                        <div class="m-3">
+                            <p>Lunes a Viernes: 7 am - 7 pm</p>
+                        </div>
+                        <div>
+                            <p>Sábados: 9 am - 6 pm</p>
+                        </div>
+                        <div class="border-bottom border-top">
+                            <p class="m-2">Métodos de Pago</p>
+                        </div>
+                        <div class="m-3">
+                            <p class="m-3">Efectivo</p>
+                            <p class="m-3">Nequi</p>
+                            <p class="m-3">Daviplata</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </footer>
+</body>
+</html>

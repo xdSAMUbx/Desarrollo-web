@@ -1,0 +1,86 @@
+@font-face {
+    font-family: 'Kiona';
+    src: url('../Recursos/Kiona-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Vogue';
+    src: url('../Recursos/Vogue.ttf');
+}
+
+body{ 
+    background: #242424; 
+}
+
+#map { 
+    height: 500px;
+}
+  
+#barra_sup{
+    background: black;
+    padding: 10px;
+}
+
+#texto_principal{
+    background: #242424;
+}
+
+#texto_pelu{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#texto_generico{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.dropdown-menu li:hover {
+    background-color: #000;
+  }
+  
+.dropdown-menu li:active {
+    background-color: #000;
+}
+  
+.dropdown-menu li a:focus {
+    background-color: #000;
+}
+
+#cabecera_productos{
+    background: #242424;
+}
+
+#forbici{
+    background: #e6d8d7;
+}
+
+#landing_page_visitanos{
+    font-family: 'Vogue';
+}
+
+#landing_page_contact{
+    font-family: 'Vogue' ;
+}
+
+#texto_1{
+    font-family: 'Vogue';
+}
+
+#texto_2{
+    font-family: 'Kiona';
+}
+
+#texto_sevicio_damas{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#texto_producto_damas{
+    font-family: 'Vogue';
+}
+
+#texto_MF{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#texto_descrip_produc{
+    font-family: Arial, Helvetica, sans-serif;
+}

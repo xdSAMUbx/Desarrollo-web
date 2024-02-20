@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title> Marcel France </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <link href="../static/estilos.css" rel="stylesheet" >
+</head>
+<body>
+	<main>
+            <header id="barra_sup">
+                <div class="d-flex container mt-5 mb-3 mx-auto">
+                    <ul class="nav">
+                        <a href="/" class="text-white text-decoration-none"><span class="fs-1" id="texto_pelu">FORBICI PELUQUERIA</span></a>
+                    </ul>
+                </div>
+            </header>
+            <header id="cabecera_productos">
+                <div id="texto">
+                    <div class="d-flex container text-center mx-auto">
+                        <ul class="nav align-items-center mt-1">
+                            <li class="nav-item">
+                                <a class="nav-link text-white" aria-current="page" href="/" id="texto_generico">Inicio</a>
+                            <li class="nav item dropdown">
+                                <a class="nav-link text-white dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false" id="texto_generico">Damas</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="/damas" id="texto_generico">Servicios</a></li>
+                                    </ul>
+                            </li>            
+                            <li class="nav item dropdown">
+                                <a class="nav-link text-white dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false" id="texto_generico">Caballeros</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="/caballeros" id="texto_generico">Servicios</a></li>
+                                    </ul>
+                            </li> 
+                            <li class="nav item dropdown">
+                                <a class="nav-link text-white dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false" id="texto_generico">Productos</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="/marcel_france" id="texto_generico">Marcel France</a></li>
+                                    </ul>
+                            </li> 
+                        </ul>
+                        <ul class="nav align-items-center ms-auto">
+                            <li><a class="nav-item me-3" href="https://www.facebook.com/profile.php?id=100063527173740">
+                                <i class="fa-brands fa-facebook-f" style="color: #ffffff"></i></a>
+                            </li>
+                            <li><a class="nav-item me-3"href="https://wa.me/573144049036">
+                                <i class="fa-brands fa-whatsapp fa-lg" style="color: #ffffff;"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+
+            <div class="container border rounded-2 border-3 mt-2" id="barra_sup">
+                <div class="text-center m-3 p-3">
+                    <p class="text-white display-1" id="landing_page_visitanos">Productos Marcel-France</p>
+                </div>
+                <div class="text-center m-3 p-1">
+                    <p class="text-white fs-3" id="texto_descrip_produc">Los productos mostrados acontinuacion, son solo una pequeña parte de los ofrecidos en tienda, para más información puede contactarse con lo números ofrecidos al final de la pagina</p>
+                </div>
+                <div class="justify-content-center container d-flex mt-3">
+                    <div class="card mb-3 m-2 " style="max-width: 600px;">
+                        <div class="row g-0">
+                            <div class="col-md-4 m-auto">
+                                <img src="../static/glicolica-hombre.webp" class="img-fluid rounded-start border border-dark border-5 rounded-2">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <form action="{{url_for('reserva_producto',producto='Crema Glicolica')}}" method="POST">
+                                        <h5 class="card-title">Crema Glicólica para Hombre</h5>
+                                        <p class="card-text">Diseñado con Ácido Glicólico el ácido de las frutas, renueva suave y progresivamente la capa cornea y las células epidérmicas muertas del cuero cabelludo generadas por resecamiento</p>
+                                        <p class="card-text"><small class="text-body-secondary">Precio: $20.000</small></p>
+                                        <label for="producto" class="form-label" style="display: none;">Producto</label>
+                                        <input type="hidden" class="form-control" name="producto" id="producto" value="Crema_Glicolica">
+                                        <a href="/reserva_producto/Crema_Glicolica"  name="submit" type="submit" class="btn btn-dark" role="button" value="Agregar">Reservar</a>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3 m-2 " style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-md-4 m-auto">
+                                <img src="../static/champu_anticaida.jpg" class="img-fluid rounded-start border border-dark border-5 rounded-2">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <form action="{{url_for('reserva_producto',producto='champu_anticaida')}}" method="POST">
+                                        <h5 class="card-title">Shampoo Anticaida para Hombre</h5>
+                                        <p class="card-text">Enriquecido con cafeína natural que estimula el crecimiento del cabello y reduce la supresión de la viabilidad folicular inducida por la dihidrotestosterona.</p>
+                                        <p class="card-text"><small class="text-body-secondary">Precio: $14.000</small></p>
+                                        <label for="producto" class="form-label" style="display: none;">Producto</label>
+                                        <input type="hidden" class="form-control" name="producto" id="producto" value="champu_anticaida">
+                                        <a href="/reserva_producto/champu_anticaida"  name="submit" type="submit" class="btn btn-dark" role="button" value="Agregar">Reservar</a>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="justify-content-center container d-flex mt-3">
+                    <div class="card mb-3 m-2 " style="max-width: 600px;">
+                        <div class="row g-0 m-auto">
+                            <div class="col-md-4">
+                                <img src="../static/champu_reparacion_instantanea.jpg" class="img-fluid rounded-start border border-dark border-5 rounded-2">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <form action="{{url_for('reserva_producto',producto='champu_reparacion')}}" method="POST">
+                                        <h5 class="card-title">Champú Reparación Instantánea</h5>
+                                        <p class="card-text">Fórmula suave especialmente diseñada para limpiar sin agredir la estructura capilar.</p>
+                                        <p class="card-text"><small class="text-body-secondary">Precio: $25.000</small></p>
+                                        <label for="producto" class="form-label" style="display: none;">Producto</label>
+                                        <input type="hidden" class="form-control" name="producto" id="producto" value="champu_reparacion">
+                                        <a href="/reserva_producto/champu_reparacion"  name="submit" type="submit" class="btn btn-dark" role="button" value="Agregar">Reservar</a>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3 m-2 " style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-md-4 m-auto">
+                                <img src="../static/bio_champu.jpg" class="img-fluid rounded-start border border-dark border-5 rounded-2">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <form action="{{url_for('reserva_producto',producto='bio_champu')}}" method="POST">
+                                        <h5 class="card-title">Bio-Champú</h5>
+                                        <p class="card-text">Bio-champú libre de Sal, Sulfatos, Parabenos y Siliconas sin derivados petroquímicos para cueros cabelludos delicados. Útil como calmante del cuero cabelludo antes y después de procesos químicos agresivos. Preserva el color en los cabellos tinturados.</p>
+                                        <p class="card-text"><small class="text-body-secondary">Precio: $30.000</small></p>
+                                        <label for="producto" class="form-label" style="display: none;">Producto</label>
+                                        <input type="hidden" class="form-control" name="producto" id="producto" value="bio_champu">
+                                        <a href="/reserva_producto/bio_champu"  name="submit" type="submit" class="btn btn-dark" role="button" value="Agregar">Reservar</a>
+                                    </form> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="justify-content-center container d-flex mt-3">
+                    <div class="card mb-3 m-2 " style="max-width: 600px;">
+                        <div class="row g-0 m-auto">
+                            <div class="col-md-4">
+                                <img src="../static/prokeratine.jpg" class="img-fluid rounded-start border border-dark border-5 rounded-2">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <form action="{{url_for('reserva_producto',producto='prokeratine_crema')}}" method="POST">
+                                        <h5 class="card-title">Prokeratine Crema Hidratante</h5>
+                                        <p class="card-text">Producto diseñado para normalizar la hidratación natural, devuelve la suavidad al cabello seco y maltratado. Aporta a cabellos muy secos o sensibles una vitalidad y acondicionamiento intensivos.</p>
+                                        <p class="card-text"><small class="text-body-secondary">Precio: $16.000</small></p>
+                                        <label for="producto" class="form-label" style="display: none;">Producto</label>
+                                        <input type="hidden" class="form-control" name="producto" id="producto" value="prokeratine_crema">
+                                        <a href="/reserva_producto/prokeratine_crema"  name="submit" type="submit" class="btn btn-dark" role="button" value="Agregar">Reservar</a>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3 m-2 " style="max-width: 540px;">
+                        <div class="row g-0 m-auto">
+                            <div class="col-md-4">
+                                <img src="../static/tratamiento-miracle.png" class="img-fluid rounded-start border border-dark border-5 rounded-2">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <form action="{{url_for('reserva_producto',producto='tratamiento_miracle')}}" method="POST"></form>
+                                        <h5 class="card-title">Miracle Tratamiento Para el Cabello</h5>
+                                        <p class="card-text">Tratamiento portable. Luego de su aplicación, mejora la textura, brillo, vitalidad y suavidad del cabello. Resultados inmediatos.</p>
+                                        <p class="card-text"><small class="text-body-secondary">Precio: $15.000</small></p>
+                                        <label for="producto" class="form-label" style="display: none;">Producto</label>
+                                        <input type="hidden" class="form-control" name="producto" id="producto" value="tratamiento_miracle">
+                                        <a href="/reserva_producto/tratamiento_miracle"  name="submit" type="submit" class="btn btn-dark" role="button" value="Agregar">Reservar</a>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+</main>
+            <footer class="mt-5"id="barra_sup">
+                <div class="p-5 container text-center">
+                    <div class="row align-items-center">
+                        <div class="col text-white">
+                            <div class="border-bottom">
+                                <p class="m-3">Comunícate con nosotros</p>
+                            </div>
+                            <ul class="nav mt-3 ">
+                                <li><a><p class="m-3">Bogotá</p></a></li>
+                            </ul>
+                            <ul class="nav mt-3 m-3">
+                                <li><a><i class="fa-solid fa-phone" style="color: #ffffff;"></i></a></li>
+                                <li><a><p class="ms-3">+57 314-404-9036</p></a></li>
+                            </ul>
+                            <ul class="nav mt-3 m-3">
+                                <li><a><i class="fa-solid fa-phone" style="color: #ffffff;"></i></i></a></li>
+                                <li><a><p class="ms-3">(1) 243 7361</p></a></li>
+                            </ul>
+                            <ul class="nav mt-3 m-3">
+                                <li><a><i class="fa-solid fa-location-pin" style="color: #ffffff;"></i></a></li>
+                                <li><a><p class="ms-3">Calle 12 #3-90</p></a></li>
+                            </ul>
+                        </div>
+                        <div class="col text-white">
+                            <div class="fs-2 p-4 ">
+                                <p id="texto_pelu">Forbici Peluqueria</p>
+                            </div>
+                            <div class="fs-4 fst-italic">
+                                <p>Expresa Tu Belleza</p>
+                            </div>
+                            <div class="fs-5 fst-italic">
+                                <p>©2023 por Forbici Peluqueria.</p>
+                            </div>
+                        </div>
+                        <div class="col text-white">
+                            <div class="border-bottom">
+                                <p class="m-3">Horarios de atención</p>
+                            </div>
+                            <div class="m-3">
+                                <p>Lunes a Viernes: 7 am - 7 pm</p>
+                            </div>
+                            <div>
+                                <p>Sabados: 9 am - 6 pm</p>
+                            </div>
+                            <div class="border-bottom border-top">
+                                <p class="m-2">Metodos de Pago</p>
+                            </div>
+                            <div class="m-3">
+                                <p class="m-3">Efectivo</p>
+                                <p class="m-3">Nequi</p>
+                                <p class="m-3">Daviplata</p>
+                            </div>
+                      </div>
+                    </div>
+                  </div>
+            </footer>
+</body>
+<script src="https://kit.fontawesome.com/ffe783e6ab.js" crossorigin="anonymous"></script>
+</html>
