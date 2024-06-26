@@ -1,2 +1,4 @@
-## What is the purpose?
-<p>This project has been created to improve my skills on web development, first of all, every design is going to be a copy from somewhere</p>
+## What's Web Development?
+
+<p>The main purpose for this repository is develop my full stack skills, that mean that I'll show by this repository all projects I go throught to develop 
+ </p>
