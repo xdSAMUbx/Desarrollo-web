@@ -1,16 +1,4 @@
-## What's Web Development?
+## Desarrollo - Web
 
-<p>The main purpose for this repository is develop my full stack skills, that means that I'll show by this repository all projects tha I made, using some tools like: </p>
-<ol>
-    <li>HTML</li>
-    <li>CSS</li>
-    <li>Typescript</li>
-    <li>Python</li>
-    <li>Bootstrap</li>
-    <li>Angular</li>
-    <li>PostgreSQL</li>
-    <li>MySQL</li>
-    <li>Mongo DB</li>
-    <li>Django</li>
-    <li>FastAPI</li>
-</ol>
+Este repositorio unicamente cumple la función de guardar las páginas web que han sido completadas en un 80% o 100%, probablemente carecen de funcionalidades ya que mi enfoque principal no ha sido el desarrollo web, sin embargo son una buena respuesta a mi experiencia con el 
+uso de distintas herramientas y/o lengüajes de programación.
